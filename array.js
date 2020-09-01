@@ -25,6 +25,36 @@
  }
 
  // 测试
- const list = [1, 3, 6, 4, 2, 9, 11, 10, 13];
- console.log(oddEvenList(list));
+//  const list = [1, 3, 6, 4, 2, 9, 11, 10, 13];
+ // console.log(oddEvenList(list));
  // [ 1, 3, 13, 11, 9, 2, 4, 10, 6 ]
+
+
+ /**
+  * 题目2：输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S，
+  * 如果有多对数字的和等于S，输出两个数的乘积最小的。
+  * 
+  * 思路：因为题目中说两个数的乘积要比较小，所以优先从两头取
+  */
+
+function findArray(list, sum) {
+    if(list && list.length > 1) {
+        let left = 0;
+        let right = list.length - 1;
+        while(left < right) {
+            let s = list[left] + list[right];
+            if(s < sum) {
+                left++;
+            } else if(s > sum){
+                right--;
+            } else {
+                return [list[left], list[right]];
+            }
+        }
+    }
+    return [];
+}
+
+let list = [1, 2, 4, 5, 7, 8, 9];
+let sum = 10;
+console.log(findArray(list, sum));
