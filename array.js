@@ -28,3 +28,30 @@
  const list = [1, 3, 6, 4, 2, 9, 11, 10, 13];
  console.log(oddEvenList(list));
  // [ 1, 3, 13, 11, 9, 2, 4, 10, 6 ]
+
+
+ // 只用一层while循环的方法
+ function oddEvenList2(list) {
+     let left = 0;
+     let right = list.length - 1;
+     let leftTag = false;
+     let rightTag = false;
+     while(left < right) {
+         if (list[left]%2 === 1 && !leftTag) {
+            left++;
+         } else {
+            leftTag = true;
+         }
+         if (list[right]%2 === 0 && !rightTag) {
+             right--;
+         } else {
+             rightTag = true
+         }
+         if (leftTag && rightTag) {
+            [list[left], list[right]] = [list[right], list[left]];
+            leftTag = false;
+            rightTag = false;
+         }
+     }
+     return list;
+}

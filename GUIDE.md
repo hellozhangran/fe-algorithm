@@ -13,6 +13,7 @@
 ## 2. 常规面试题
 每天刷半小时常规面试题，复杂的要写成博客，需要代码实现的要coding。
 * [手写bind](https://github.com/hellozhangran/fe-algorithm/blob/master/bind.js)
+JS的原型链
 
 
 ## 3. 技术方案
