@@ -25,7 +25,6 @@
  }
 
  // 测试
-<<<<<<< HEAD
  const list = [1, 3, 6, 4, 2, 9, 11, 10, 13];
  console.log(oddEvenList(list));
  // [ 1, 3, 13, 11, 9, 2, 4, 10, 6 ]
@@ -56,7 +55,6 @@
      }
      return list;
 }
-=======
 //  const list = [1, 3, 6, 4, 2, 9, 11, 10, 13];
  // console.log(oddEvenList(list));
  // [ 1, 3, 13, 11, 9, 2, 4, 10, 6 ]
@@ -90,4 +88,3 @@ function findArray(list, sum) {
 let list = [1, 2, 4, 5, 7, 8, 9];
 let sum = 10;
 console.log(findArray(list, sum));
->>>>>>> c5daf9238142fe5c636cc44fdbc1bf050d276e5d
